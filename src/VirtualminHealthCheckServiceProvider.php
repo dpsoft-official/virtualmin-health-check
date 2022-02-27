@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Dpsoft\VirtualminHealthCheck;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use Dpsoft\VirtualminHealthCheck\Commands\VirtualminHealthCheckCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class VirtualminHealthCheckServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('virtualmin-health-check')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_virtualmin-health-check_table')
+            ->hasCommand(VirtualminHealthCheckCommand::class);
     }
 }
